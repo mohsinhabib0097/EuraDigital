@@ -12,8 +12,8 @@
     en: {
       menuOpen: "Open menu", menuClose: "Close menu", locale: "en-IE",
       formError: "Please check the highlighted fields and accept the privacy policy.",
-      snapshotOk: "Thank you! You'll receive your snapshot within 24–48 hours.",
-      contactOk: "Message sent! We'll get back to you within 24 hours.",
+      snapshotOk: "Thank you! Your Digital Snapshot will arrive by email within 24 to 48 hours.",
+      contactOk: "Thanks! Your message is on its way — we will get back to you within one business day.",
     },
     es: {
       menuOpen: "Abrir menú", menuClose: "Cerrar menú", locale: "es-ES",
@@ -156,17 +156,17 @@
     sistemas: { icon: "⚡", title: "Sistemas de negocio a medida", text: "Herramientas a medida para presupuestos, leads, reservas y facturación que se adaptan a tu forma de trabajar.", list: ["CRM y gestión de leads", "Reservas y citas online", "Presupuestos automáticos", "Paneles de control"] },
   };
   servicesByLang.en = {
-    web: { icon: "🖥️", title: "Web Development", text: "Fast, modern websites built to turn visitors into customers. You approve the design, we handle everything else.", list: ["Custom, responsive design", "Optimised for SEO and speed", "Easy-to-edit dashboard", "GDPR and cookie compliance"] },
-    dominio: { icon: "🌐", title: "Domain, Email & Hosting", text: "We take care of all the technical setup so your website and email just work.", list: [".es / .com domain registration", "Professional email", "Fast hosting in Europe", "SSL certificate and backups"] },
-    seo: { icon: "🔍", title: "Full-Service SEO", text: "We get your business ranking on Google so the customers already searching for you can find you.", list: ["Full technical audit", "Keyword research", "Optimised content", "Clear monthly reports"] },
-    "ia-vis": { icon: "✨", title: "AI Visibility", text: "We check what ChatGPT, Claude and Gemini say about your business and optimise your presence so they recommend you.", list: ["AI mention analysis", "Structured data (schema)", "llms.txt file set up", "Prioritised improvement plan"] },
+    web: { icon: "🖥️", title: "Web Development", text: "Fast, modern websites built to turn visitors into customers. You approve the design, we handle everything else.", list: ["Custom, responsive design", "Built for SEO and speed", "Easy-to-edit dashboard", "GDPR and cookie compliance (EU-ready)"] },
+    dominio: { icon: "🌐", title: "Domain, Email, Hosting & Care", text: "We take care of the technical side — domains, email, hosting, updates, and backups — so your website just works.", list: [".es / .com domain registration", "Professional email", "Fast, secure hosting in the EU", "SSL, updates, and daily backups"] },
+    seo: { icon: "🔍", title: "Full-Service SEO", text: "We get your business ranking on Google, so the customers already searching for what you offer can actually find you.", list: ["Full technical audit", "Keyword research", "Optimised content", "Plain-English monthly reports"] },
+    "ia-vis": { icon: "✨", title: "AI Visibility", text: "We check what ChatGPT, Claude, and Gemini say about your business, track it every month, and fix what is holding you back.", list: ["AI mention analysis", "Structured data (schema)", "An llms.txt file built for AI tools", "Prioritised improvement plan"] },
     social: { icon: "📣", title: "Social Media Marketing", text: "Content and community management that builds your brand and starts conversations with customers.", list: ["Instagram, Facebook, LinkedIn and TikTok", "Content calendar", "Post design and short-form video", "Community management"] },
-    sem: { icon: "🎯", title: "SEM / PPC Advertising", text: "Results-focused Google Ads and Meta Ads campaigns, with every euro tracked.", list: ["Google Ads and Meta Ads", "High-converting landing pages", "Conversion tracking", "Weekly optimisation"] },
+    sem: { icon: "🎯", title: "SEM / PPC Advertising", text: "Google Ads and Meta Ads campaigns focused on real results, with every euro tracked.", list: ["Google Ads and Meta Ads", "High-converting landing pages", "Conversion tracking", "Weekly optimization"] },
     apps: { icon: "📱", title: "App Development", text: "Custom mobile and web apps for iOS and Android that solve real problems in your business.", list: ["iOS and Android", "UX/UI design", "Integration with your systems", "Support and maintenance"] },
-    ia: { icon: "🤖", title: "AI Solutions", text: "We automate repetitive tasks with AI so your team can focus on what matters.", list: ["Customer service chatbots", "Process automation", "Internal assistants", "Integration with your tools"] },
-    reputacion: { icon: "⭐", title: "Reputation & Reviews", text: "We help you earn more positive reviews and manage your online reputation.", list: ["Automatic review requests", "Review responses", "Brand monitoring", "Review widgets for your website"] },
-    local: { icon: "📍", title: "Local SEO & Google Business", text: "Stand out on Google Maps and in local searches in your city.", list: ["Google Business Profile optimisation", "Local directory citations", "Consistent NAP data", "Posts and photos"] },
-    sistemas: { icon: "⚡", title: "Custom business systems", text: "Custom tools for quotes, leads, bookings and billing that fit the way you work.", list: ["CRM and lead management", "Online bookings and appointments", "Automatic quotes", "Dashboards"] },
+    ia: { icon: "🤖", title: "AI Solutions", text: "We use AI to automate the repetitive tasks, so your team can focus on the work that matters.", list: ["Customer service chatbots", "Process automation", "Internal assistants", "Integration with your tools"] },
+    reputacion: { icon: "⭐", title: "Reputation & Review", text: "We help you earn more 5-star reviews and stay on top of your online reputation.", list: ["Automatic review requests", "Review responses", "Brand monitoring", "Review widgets for your website"] },
+    local: { icon: "📍", title: "Local Listings & Citations", text: "Stand out on Google Maps and in local searches across Córdoba and beyond.", list: ["Google Business Profile optimization", "Local directory citations", "Consistent NAP data", "Posts and photos"] },
+    sistemas: { icon: "⚡", title: "Business Systems", text: "Custom tools for quotes, leads, bookings and billing that fit the way you work.", list: ["CRM and lead management", "Online bookings and appointments", "Automatic quotes", "Dashboards"] },
   };
   const services = servicesByLang[LANG];
   const modal = $("#serviceModal");
