@@ -7,6 +7,21 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const LANG = document.documentElement.lang === "es" ? "es" : "en";
+  const UI = {
+    en: {
+      menuOpen: "Open menu", menuClose: "Close menu", locale: "en-IE",
+      formError: "Please check the highlighted fields and accept the privacy policy.",
+      snapshotOk: "Thank you! You'll receive your snapshot within 24–48 hours.",
+      contactOk: "Message sent! We'll get back to you within 24 hours.",
+    },
+    es: {
+      menuOpen: "Abrir menú", menuClose: "Cerrar menú", locale: "es-ES",
+      formError: "Revisa los campos marcados y acepta la política de privacidad.",
+      snapshotOk: "¡Gracias! Recibirás tu diagnóstico en 24–48 horas.",
+      contactOk: "¡Mensaje enviado! Te responderemos en menos de 24 horas.",
+    },
+  }[LANG];
 
   /* ---------- año ---------- */
   $("#year").textContent = new Date().getFullYear();
@@ -25,7 +40,7 @@
     burger.classList.toggle("is-open", open);
     document.body.classList.toggle("menu-open", open);
     burger.setAttribute("aria-expanded", String(open));
-    burger.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    burger.setAttribute("aria-label", open ? UI.menuClose : UI.menuOpen);
   };
   burger.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
   $$(".nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
@@ -126,7 +141,8 @@
   }));
 
   /* ---------- modal de servicios ---------- */
-  const services = {
+  const servicesByLang = {};
+  servicesByLang.es = {
     web: { icon: "🖥️", title: "Desarrollo Web", text: "Webs rápidas, modernas y optimizadas para convertir visitas en clientes. Tú apruebas el diseño, nosotros nos encargamos del resto.", list: ["Diseño a medida y responsive", "Optimizada para SEO y velocidad", "Panel fácil de editar", "Cumplimiento RGPD y cookies"] },
     dominio: { icon: "🌐", title: "Dominio, Email y Hosting", text: "Nos ocupamos de toda la parte técnica para que tu web y tu correo funcionen sin interrupciones.", list: ["Registro de dominio .es / .com", "Email profesional", "Hosting rápido en Europa", "Certificado SSL y copias de seguridad"] },
     seo: { icon: "🔍", title: "SEO Integral", text: "Posicionamos tu negocio en Google para que te encuentren los clientes que ya te están buscando.", list: ["Auditoría técnica completa", "Investigación de palabras clave", "Contenido optimizado", "Informes mensuales claros"] },
@@ -139,6 +155,20 @@
     local: { icon: "📍", title: "SEO Local y Google Business", text: "Destaca en Google Maps y en las búsquedas locales de tu ciudad.", list: ["Optimización de Google Business Profile", "Citas en directorios locales", "Coherencia de datos NAP", "Publicaciones y fotos"] },
     sistemas: { icon: "⚡", title: "Sistemas de negocio a medida", text: "Herramientas a medida para presupuestos, leads, reservas y facturación que se adaptan a tu forma de trabajar.", list: ["CRM y gestión de leads", "Reservas y citas online", "Presupuestos automáticos", "Paneles de control"] },
   };
+  servicesByLang.en = {
+    web: { icon: "🖥️", title: "Web Development", text: "Fast, modern websites built to turn visitors into customers. You approve the design, we handle everything else.", list: ["Custom, responsive design", "Optimised for SEO and speed", "Easy-to-edit dashboard", "GDPR and cookie compliance"] },
+    dominio: { icon: "🌐", title: "Domain, Email & Hosting", text: "We take care of all the technical setup so your website and email just work.", list: [".es / .com domain registration", "Professional email", "Fast hosting in Europe", "SSL certificate and backups"] },
+    seo: { icon: "🔍", title: "Full-Service SEO", text: "We get your business ranking on Google so the customers already searching for you can find you.", list: ["Full technical audit", "Keyword research", "Optimised content", "Clear monthly reports"] },
+    "ia-vis": { icon: "✨", title: "AI Visibility", text: "We check what ChatGPT, Claude and Gemini say about your business and optimise your presence so they recommend you.", list: ["AI mention analysis", "Structured data (schema)", "llms.txt file set up", "Prioritised improvement plan"] },
+    social: { icon: "📣", title: "Social Media Marketing", text: "Content and community management that builds your brand and starts conversations with customers.", list: ["Instagram, Facebook, LinkedIn and TikTok", "Content calendar", "Post design and short-form video", "Community management"] },
+    sem: { icon: "🎯", title: "SEM / PPC Advertising", text: "Results-focused Google Ads and Meta Ads campaigns, with every euro tracked.", list: ["Google Ads and Meta Ads", "High-converting landing pages", "Conversion tracking", "Weekly optimisation"] },
+    apps: { icon: "📱", title: "App Development", text: "Custom mobile and web apps for iOS and Android that solve real problems in your business.", list: ["iOS and Android", "UX/UI design", "Integration with your systems", "Support and maintenance"] },
+    ia: { icon: "🤖", title: "AI Solutions", text: "We automate repetitive tasks with AI so your team can focus on what matters.", list: ["Customer service chatbots", "Process automation", "Internal assistants", "Integration with your tools"] },
+    reputacion: { icon: "⭐", title: "Reputation & Reviews", text: "We help you earn more positive reviews and manage your online reputation.", list: ["Automatic review requests", "Review responses", "Brand monitoring", "Review widgets for your website"] },
+    local: { icon: "📍", title: "Local SEO & Google Business", text: "Stand out on Google Maps and in local searches in your city.", list: ["Google Business Profile optimisation", "Local directory citations", "Consistent NAP data", "Posts and photos"] },
+    sistemas: { icon: "⚡", title: "Custom business systems", text: "Custom tools for quotes, leads, bookings and billing that fit the way you work.", list: ["CRM and lead management", "Online bookings and appointments", "Automatic quotes", "Dashboards"] },
+  };
+  const services = servicesByLang[LANG];
   const modal = $("#serviceModal");
   let lastFocus = null;
   const openModal = (key) => {
@@ -171,7 +201,7 @@
   });
 
   /* ---------- calculadora ---------- */
-  const fmt = new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  const fmt = new Intl.NumberFormat(UI.locale, { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
   const range = $("#revenue");
   const goals = $$(".calc__goal .filter");
   let pct = 0.05;
@@ -204,7 +234,7 @@
       });
       if (!valid) {
         msg.className = "form__msg err";
-        msg.textContent = "Revisa los campos marcados y acepta la política de privacidad.";
+        msg.textContent = UI.formError;
         return;
       }
       // TODO: conectar con backend / servicio de formularios (Formspree, PHP mailer, etc.)
@@ -224,8 +254,8 @@
       if (wrap) wrap.classList.remove("has-error");
     });
   };
-  handleForm($("#snapshotForm"), "¡Gracias! Recibirás tu diagnóstico en 24–48 horas.");
-  handleForm($("#contactForm"), "¡Mensaje enviado! Te responderemos en menos de 24 horas.");
+  handleForm($("#snapshotForm"), UI.snapshotOk);
+  handleForm($("#contactForm"), UI.contactOk);
 
   /* ---------- aviso de cookies ---------- */
   const cookies = $("#cookies");
