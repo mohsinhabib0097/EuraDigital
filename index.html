@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eura Digital | Agencia de Soluciones Digitales en España</title>
+  <meta name="description" content="Eura Digital ayuda a empresas en España a lanzar, crecer y escalar con desarrollo web, apps, SEO, publicidad digital, redes sociales y soluciones de IA." />
+  <meta name="theme-color" content="#0B1736" />
+  <meta property="og:title" content="Eura Digital | Agencia de Soluciones Digitales" />
+  <meta property="og:description" content="Diseño, tecnología y marketing digital para empresas en España." />
+  <meta property="og:image" content="assets/img/logo.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Barra superior ===== -->
+  <div class="topbar">
+    <span class="dot-pulse"></span> Plazas disponibles este mes para nuevos proyectos
+  </div>
+
+  <!-- ===== Cabecera ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Eura Digital - Inicio">
+        <img src="assets/img/logo.png" alt="Eura Digital - Digital Solutions Agency" width="200" height="37" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link is-active">Inicio</a></li>
+          <li class="nav__dropdown">
+            <button class="nav__link nav__toggle" aria-expanded="false">Servicios <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <div class="dropdown">
+              <a href="#servicios" data-service="web">Desarrollo Web</a>
+              <a href="#servicios" data-service="seo">SEO Integral</a>
+              <a href="#servicios" data-service="social">Redes Sociales</a>
+              <a href="#servicios" data-service="sem">SEM / Publicidad PPC</a>
+              <a href="#servicios" data-service="apps">Desarrollo de Apps</a>
+              <a href="#servicios" data-service="ia">Soluciones con IA</a>
+            </div>
+          </li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#metodo" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="#metodo" class="pill pill--outline"><span class="dot"></span> Cómo trabajamos</a>
+          <a href="#diagnostico" class="btn btn--primary btn--sm">Diagnóstico gratis</a>
+        </div>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__glow hero__glow--blue"></div>
+      <div class="hero__glow hero__glow--orange"></div>
+      <div class="container hero__inner">
+        <span class="badge reveal">Desarrollo web &amp; marketing digital en España</span>
+        <h1 class="hero__title reveal">
+          Diseño sin complicaciones<br />
+          para <span class="text-grad">modernizar</span> tu negocio
+        </h1>
+        <p class="hero__lead reveal">
+          Eura Digital facilita que las empresas lancen, crezcan y escalen con desarrollo web y de apps,
+          y marketing digital — sin retrasos, sin dramas. Marketing digital bien hecho.
+        </p>
+        <p class="hero__strong reveal">
+          Damos a tu negocio la <span class="text-orange">VENTAJA</span>.<br />
+          Trabaja con un equipo en el que puedes <span class="text-blue">CONFIAR</span>.
+        </p>
+        <a href="#diagnostico" class="btn btn--primary reveal">Solicita tu diagnóstico gratis <span class="arrow">→</span></a>
+
+        <ul class="chips reveal">
+          <li>Desarrollo Web</li>
+          <li>SEO Integral</li>
+          <li>Redes Sociales</li>
+          <li>SEM / PPC</li>
+          <li>Apps Móviles</li>
+          <li>Soluciones IA</li>
+          <li>Y más…</li>
+        </ul>
+
+        <a href="#calculadora" class="hero__mini reveal"><span class="dot dot--green"></span> ¿Cuánto deberías invertir en marketing? <span class="arrow">→</span></a>
+      </div>
+
+      <!-- Showcase -->
+      <div class="container">
+        <div class="showcase reveal">
+          <div class="showcase__track">
+            <div class="mock mock--browser">
+              <div class="mock__bar"><i></i><i></i><i></i></div>
+              <div class="mock__body">
+                <div class="mock__line w60"></div><div class="mock__line w40"></div>
+                <div class="mock__grid"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="mock mock--chart">
+              <p class="mock__label">Tráfico orgánico</p>
+              <p class="mock__kpi">+182%</p>
+              <svg viewBox="0 0 200 70" preserveAspectRatio="none"><path d="M0 60 C30 55 40 40 70 42 S110 20 140 22 S180 6 200 4" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1E88E5"/><stop offset="1" stop-color="#00C8F0"/></linearGradient></defs></svg>
+            </div>
+            <div class="mock mock--ads">
+              <p class="mock__label">Meta Ads · Google Ads</p>
+              <div class="bars"><span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:52%"></span><span style="--h:85%"></span><span style="--h:72%"></span><span style="--h:96%"></span></div>
+            </div>
+          </div>
+          <div class="showcase__content">
+            <h2>Webs y campañas para <span class="text-grad-warm">negocios locales</span>.</h2>
+            <a href="#proyectos" class="btn btn--light btn--sm">Ver nuestro trabajo <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cintas ===== -->
+    <section class="ribbons" aria-hidden="true">
+      <div class="ribbon ribbon--orange">
+        <div class="ribbon__track">
+          <span>Desarrollo Web</span><span>SEO Integral</span><span>Marketing en Redes Sociales</span><span>SEM / PPC</span><span>Desarrollo de Apps</span><span>Soluciones con IA</span>
+          <span>Desarrollo Web</span><span>SEO Integral</span><span>Marketing en Redes Sociales</span><span>SEM / PPC</span><span>Desarrollo de Apps</span><span>Soluciones con IA</span>
+        </div>
+      </div>
+      <div class="ribbon ribbon--blue">
+        <div class="ribbon__track ribbon__track--reverse">
+          <span>Apps Móviles</span><span>Google Ads</span><span>Meta Ads</span><span>Branding</span><span>E-commerce</span><span>Automatización</span>
+          <span>Apps Móviles</span><span>Google Ads</span><span>Meta Ads</span><span>Branding</span><span>E-commerce</span><span>Automatización</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Declaración ===== -->
+    <section class="statement">
+      <div class="container">
+        <span class="handwrite reveal">(¡hola!)</span>
+        <p class="statement__text reveal" id="statementText">
+          Eura Digital ayuda a las empresas a lanzar, crecer y escalar mediante estrategia, tecnología y marketing digital.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Servicios digitales</span>
+            <h2 class="section__title">Lo que ofrecemos</h2>
+          </div>
+          <p class="section__intro">Web, búsqueda, redes, IA y publicidad trabajando juntos, para que no tengas que coordinar a cinco proveedores. Pulsa un servicio para ver los detalles.</p>
+        </div>
+
+        <div class="feature-row reveal">
+          <span class="tag tag--orange">Nuevo</span>
+          <p><strong>Web Eura</strong> — Una web que de verdad genera clientes. Tú la apruebas, nosotros la construimos.</p>
+          <button class="btn btn--light btn--xs" data-service="web">Ver Web Eura →</button>
+        </div>
+        <div class="feature-row feature-row--alt reveal">
+          <span class="tag tag--blue">A medida</span>
+          <p><strong>Sistemas de negocio</strong> — Presupuestos, leads, reservas y facturación que se adaptan a tu forma de trabajar.</p>
+          <button class="btn btn--light btn--xs" data-service="sistemas">Crea tu lista de deseos →</button>
+        </div>
+
+        <div class="service-grid">
+          <button class="service-card reveal" data-service="web"><span class="ico ico--blue">🖥️</span>Desarrollo Web<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="dominio"><span class="ico ico--orange">🌐</span>Dominio, Email y Hosting<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="seo"><span class="ico ico--green">🔍</span>SEO Integral<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="ia-vis"><span class="ico ico--blue">✨</span>Visibilidad en IA<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="social"><span class="ico ico--orange">📣</span>Marketing en Redes Sociales<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="sem"><span class="ico ico--green">🎯</span>SEM / Publicidad PPC<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="apps"><span class="ico ico--orange">📱</span>Desarrollo de Apps<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="ia"><span class="ico ico--blue">🤖</span>Soluciones con IA<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="reputacion"><span class="ico ico--orange">⭐</span>Reputación y Reseñas<span class="chev">›</span></button>
+          <button class="service-card reveal" data-service="local"><span class="ico ico--blue">📍</span>SEO Local y Google Business<span class="chev">›</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Por qué nosotros ===== -->
+    <section class="section why" id="metodo">
+      <div class="container">
+        <span class="eyebrow">Por qué las empresas eligen Eura Digital</span>
+        <h2 class="section__title">Respuestas claras. Trabajo sólido.</h2>
+        <p class="section__intro section__intro--left">Un equipo pequeño y cercano que te explica exactamente qué está haciendo y por qué, en un lenguaje claro.</p>
+
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <span class="num num--green">1</span>
+            <h3>Estrategia antes que gasto</h3>
+            <p>Empezamos por tus objetivos y tus números, después decidimos qué construir o lanzar. Sin palabrería, sin métricas de vanidad.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="num num--orange">2</span>
+            <h3>Hecho para durar</h3>
+            <p>Webs rápidas, limpias y seguras que puedes actualizar tú mismo sin pagar a un desarrollador por cada pequeño cambio.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="num num--blue">3</span>
+            <h3>Medido, no adivinado</h3>
+            <p>Configuramos la analítica desde el primer día, para que cada euro invertido y cada lead se pueda rastrear hasta lo que realmente ocurrió.</p>
+          </article>
+          <article class="why-card reveal">
+            <span class="num num--dark">4</span>
+            <h3>Informes en lenguaje claro</h3>
+            <p>Actualizaciones sencillas sobre qué funciona y qué no, en un lenguaje que entiendes. No necesitas un máster en marketing.</p>
+          </article>
+        </div>
+
+        <div class="stats reveal">
+          <div><strong data-count="120">0</strong><span>+ proyectos entregados</span></div>
+          <div><strong data-count="98">0</strong><span>% clientes satisfechos</span></div>
+          <div><strong data-count="48">0</strong><span>h para tu diagnóstico</span></div>
+          <div><strong data-count="7">0</strong><span>años de experiencia</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proyectos ===== -->
+    <section class="section projects" id="proyectos">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <div>
+            <span class="eyebrow">Trabajo destacado</span>
+            <h2 class="section__title">Proyectos recientes</h2>
+          </div>
+          <div class="filters" role="tablist">
+            <button class="filter is-active" data-filter="all">Todos</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="marketing">Marketing</button>
+            <button class="filter" data-filter="app">Apps</button>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project reveal" data-cat="web">
+            <div class="project__thumb project__thumb--1"><span>Reformas Hogar</span></div>
+            <div class="project__body"><span class="ico ico--green">🏠</span><div><h3>Reformas Hogar Madrid</h3><p>Web corporativa + SEO local</p></div><span class="chev">›</span></div>
+          </article>
+          <article class="project reveal" data-cat="marketing">
+            <div class="project__thumb project__thumb--2"><span>Clínica Dental</span></div>
+            <div class="project__body"><span class="ico ico--orange">🦷</span><div><h3>Clínica Dental Valencia</h3><p>Google Ads + Meta Ads</p></div><span class="chev">›</span></div>
+          </article>
+          <article class="project reveal" data-cat="app">
+            <div class="project__thumb project__thumb--3"><span>Pisos Turísticos</span></div>
+            <div class="project__body"><span class="ico ico--blue">🏖️</span><div><h3>Pisos Turísticos Málaga</h3><p>App de gestión de reservas</p></div><span class="chev">›</span></div>
+          </article>
+          <article class="project reveal" data-cat="web">
+            <div class="project__thumb project__thumb--4"><span>Restaurante</span></div>
+            <div class="project__body"><span class="ico ico--orange">🥘</span><div><h3>Restaurante Barcelona</h3><p>Web + reservas online</p></div><span class="chev">›</span></div>
+          </article>
+          <article class="project reveal" data-cat="marketing">
+            <div class="project__thumb project__thumb--5"><span>Gimnasio</span></div>
+            <div class="project__body"><span class="ico ico--green">💪</span><div><h3>Gimnasio Sevilla</h3><p>Redes sociales + captación</p></div><span class="chev">›</span></div>
+          </article>
+          <article class="project reveal" data-cat="app">
+            <div class="project__thumb project__thumb--6"><span>Logística</span></div>
+            <div class="project__body"><span class="ico ico--blue">🚚</span><div><h3>Logística Bilbao</h3><p>Sistema de pedidos a medida</p></div><span class="chev">›</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Bloques CTA oscuros ===== -->
+    <section class="section promos">
+      <div class="container">
+        <div class="promo reveal">
+          <div class="promo__main">
+            <span class="tag tag--orange">Sistemas a medida</span>
+            <h2>¿Qué te gustaría que tu negocio hiciera solo?</h2>
+            <p>Presupuestos, leads, reservas y seguimiento: te creamos herramientas a medida para que tu negocio funcione solo. Cuéntanos lo que necesitas y te mostraremos cómo lo resolvemos.</p>
+            <div class="promo__btns">
+              <a href="#contacto" class="btn btn--primary btn--sm">Crea tu lista de deseos →</a>
+              <button class="btn btn--ghost btn--sm" data-service="sistemas">Ver sistemas de negocio</button>
+            </div>
+          </div>
+          <div class="promo__side">
+            <span class="ico ico--orange">⚡</span>
+            <h3>Deseos que escuchamos a menudo</h3>
+            <ul class="checks">
+              <li>Enviar presupuestos más rápido</li>
+              <li>Responder a nuevos leads al instante</li>
+              <li>Hacer seguimiento a tiempo</li>
+              <li>Tener a todo el equipo en sintonía</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="promo promo--ai reveal" id="ia-visibilidad">
+          <div class="promo__main">
+            <span class="tag tag--green">IA</span>
+            <h2>¿Te recomiendan ChatGPT, Claude y Gemini?</h2>
+            <p>Los clientes ya preguntan a la IA a quién llamar. Comprobamos si tu negocio aparece, lo que la IA dice de ti y te ayudamos a corregirlo.</p>
+            <div class="promo__btns">
+              <a href="#diagnostico" class="btn btn--primary btn--sm">Comprobar mi visibilidad en IA →</a>
+              <button class="btn btn--ghost btn--sm" data-service="ia-vis">Cómo funciona</button>
+            </div>
+          </div>
+          <div class="promo__side">
+            <span class="ico ico--blue">🔎</span>
+            <h3>Qué revisa el análisis gratuito</h3>
+            <ul class="checks">
+              <li>Datos y horarios del negocio</li>
+              <li>Precios y servicios en tu web</li>
+              <li>Un archivo preparado para la IA</li>
+              <li>Menciones y reseñas en la IA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Calculadora ===== -->
+    <section class="section calc" id="calculadora">
+      <div class="container calc__inner">
+        <div>
+          <span class="eyebrow">Herramienta gratuita</span>
+          <h2 class="section__title">¿Cuánto invertir en marketing?</h2>
+          <p class="section__intro section__intro--left">Una referencia rápida: las pymes suelen invertir entre un 5% y un 10% de su facturación en marketing. Mueve el control para estimar tu presupuesto mensual.</p>
+        </div>
+        <div class="calc__card reveal">
+          <label for="revenue">Facturación anual estimada: <strong id="revenueOut">250.000 €</strong></label>
+          <input type="range" id="revenue" min="50000" max="2000000" step="10000" value="250000" />
+          <div class="calc__goal" role="radiogroup" aria-label="Objetivo">
+            <button class="filter is-active" data-pct="0.05">Mantener</button>
+            <button class="filter" data-pct="0.075">Crecer</button>
+            <button class="filter" data-pct="0.10">Crecer rápido</button>
+          </div>
+          <div class="calc__result">
+            <span>Presupuesto mensual recomendado</span>
+            <strong id="calcOut">1.042 €</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Diagnóstico gratuito ===== -->
+    <section class="section snapshot" id="diagnostico">
+      <div class="container snapshot__inner">
+        <div>
+          <span class="handwrite handwrite--orange">(gratis)</span>
+          <h2 class="section__title">Consigue tu diagnóstico<br />digital gratuito</h2>
+          <p class="section__intro section__intro--left">Descubre cómo se presenta tu negocio online. Introduce tus datos y te prepararemos un informe digital personalizado.</p>
+          <div class="info-card">
+            <span class="ico ico--green">⏱️</span>
+            <div>
+              <strong>Recíbelo en 24 a 48 horas</strong>
+              <p>El informe tarda entre 24 y 48 horas. Lo revisa una persona real y te lo enviamos por email en cuanto esté listo.</p>
+            </div>
+          </div>
+          <div class="info-card info-card--row">
+            <span class="ico ico--blue">✨</span>
+            <div>
+              <strong>¿Te recomienda la IA?</strong>
+              <p>Comprueba si la IA (ChatGPT, Claude, Gemini) recomienda tu negocio.</p>
+            </div>
+            <a href="#ia-visibilidad" class="link-arrow">Comprobación gratis →</a>
+          </div>
+        </div>
+
+        <form class="form card reveal" id="snapshotForm" novalidate>
+          <div class="form__row">
+            <div class="field"><label for="s-name">Nombre</label><input id="s-name" name="nombre" type="text" required autocomplete="given-name" /></div>
+            <div class="field"><label for="s-web">Web (opcional)</label><input id="s-web" name="web" type="url" placeholder="https://" /></div>
+          </div>
+          <div class="field"><label for="s-business">Nombre del negocio</label><input id="s-business" name="negocio" type="text" required autocomplete="organization" /></div>
+          <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" required autocomplete="email" /></div>
+          <label class="check"><input type="checkbox" required /> <span>He leído y acepto la <a href="#">política de privacidad</a>.</span></label>
+          <button type="submit" class="btn btn--primary btn--block">Obtener mi diagnóstico gratis</button>
+          <p class="form__note">Revisado por una persona en 24–48 horas. Recibirás tu informe por email.</p>
+          <p class="form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div>
+          <span class="handwrite handwrite--orange">(trabajemos juntos)</span>
+          <h2 class="contact__title">¿Listo para hacer crecer tu <span class="text-orange">ventaja</span> digital?</h2>
+          <p>Cuéntanos qué estás construyendo y te ayudaremos a hacerlo realidad.</p>
+          <ul class="contact__list">
+            <li><span>✉️</span><a href="mailto:info@euradigital.es">info@euradigital.es</a></li>
+            <li><span>📞</span><a href="tel:+34600000000">+34 600 000 000</a></li>
+            <li><span>📍</span>Madrid, España</li>
+          </ul>
+        </div>
+
+        <form class="form card" id="contactForm" novalidate>
+          <div class="field"><label for="c-name">Tu nombre</label><input id="c-name" name="nombre" type="text" required autocomplete="name" /></div>
+          <div class="field"><label for="c-email">Tu email</label><input id="c-email" name="email" type="email" required autocomplete="email" /></div>
+          <div class="field">
+            <label for="c-help">¿Ya tienes a alguien gestionando tu marketing?</label>
+            <select id="c-help" name="marketing">
+              <option value="">Selecciona una opción</option>
+              <option>No, empezamos de cero</option>
+              <option>Sí, lo gestionamos internamente</option>
+              <option>Sí, con otra agencia</option>
+            </select>
+          </div>
+          <div class="field"><label for="c-msg">Detalles del proyecto</label><textarea id="c-msg" name="mensaje" rows="4" placeholder="¿Qué estás construyendo y qué te gustaría conseguir?"></textarea></div>
+          <label class="check"><input type="checkbox" required /> <span>Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos.</span></label>
+          <button type="submit" class="btn btn--primary">Enviar mensaje →</button>
+          <p class="form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-white.png" alt="Eura Digital" width="200" height="37" loading="lazy" />
+          <p>Desarrollo web y de apps y marketing digital para empresas en crecimiento. Con base en España, trabajando en toda Europa.</p>
+          <a href="#contacto" class="btn btn--ghost btn--xs">Área de clientes →</a>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <a href="#inicio">Inicio</a><a href="#metodo">Nosotros</a><a href="#servicios">Servicios</a><a href="#metodo">Cómo trabajamos</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a>
+        </div>
+        <div>
+          <h4>Empieza aquí</h4>
+          <a href="#diagnostico">Diagnóstico digital gratis</a><a href="#proyectos">Nuestro trabajo</a><a href="#calculadora">Calculadora de presupuesto</a>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <a href="mailto:info@euradigital.es">info@euradigital.es</a><a href="tel:+34600000000">+34 600 000 000</a><span>Madrid, España</span>
+        </div>
+      </div>
+      <div class="footer__mega" aria-hidden="true">Eura Digital</div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Eura Digital. Todos los derechos reservados.</p>
+        <div><a href="#">Aviso legal</a><a href="#">Política de privacidad</a><a href="#">Política de cookies</a></div>
+        <a href="#inicio" class="to-top">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Modal de servicio ===== -->
+  <div class="modal" id="serviceModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Cerrar">×</button>
+      <span class="ico ico--blue" id="modalIcon">🖥️</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <ul class="checks checks--dark" id="modalList"></ul>
+      <a href="#contacto" class="btn btn--primary btn--sm" data-close>Hablemos de tu proyecto →</a>
+    </div>
+  </div>
+
+  <!-- ===== Cookies (LSSI / RGPD) ===== -->
+  <div class="cookies" id="cookies" hidden>
+    <p>Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Consulta nuestra <a href="#">política de cookies</a>.</p>
+    <div>
+      <button class="btn btn--ghost btn--xs" data-cookies="reject">Rechazar</button>
+      <button class="btn btn--primary btn--xs" data-cookies="accept">Aceptar</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/34600000000" class="whatsapp" aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
