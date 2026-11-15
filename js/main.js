@@ -95,6 +95,43 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
+
+  /* ---------- hero rotating word ---------- */
+  const rot = $(".rotator");
+  if (rot && !reduceMotion) {
+    const words = rot.dataset.words.split("|");
+    const w = $(".rotator__word", rot);
+    let i = 0;
+    setInterval(() => {
+      w.classList.add("is-out");
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        w.textContent = words[i];
+        w.style.transition = "none";
+        w.classList.remove("is-out");
+        w.classList.add("is-in");
+        void w.offsetWidth;
+        w.style.transition = "";
+        w.classList.remove("is-in");
+      }, 350);
+    }, 2800);
+  }
+
+  /* ---------- hero floating cards parallax ---------- */
+  const fcards = $$(".fcard");
+  if (fcards.length && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    const hero = $(".hero");
+    hero.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+      fcards.forEach((c) => {
+        const d = +c.dataset.depth || 10;
+        c.style.marginLeft = (x * d) + "px";
+        c.style.marginTop = (y * d) + "px";
+      });
+    });
+  }
+
   /* ---------- texto de declaración que se ilumina ---------- */
   const st = $("#statementText");
   if (st && !reduceMotion) {

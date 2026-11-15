@@ -65,33 +65,51 @@
   <main>
     <!-- ===== Hero ===== -->
     <section class="hero" id="inicio">
-      <div class="hero__glow hero__glow--blue"></div>
-      <div class="hero__glow hero__glow--orange"></div>
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--blue"></div>
+        <div class="hero__glow hero__glow--orange"></div>
+      </div>
+
+      <!-- Floating proof cards (wide screens) -->
+      <div class="float-cards" aria-hidden="true">
+        <div class="fcard fcard--tl" data-depth="14">
+          <span class="fcard__ico fcard__ico--green">✓</span>
+          <div><strong>Nuevo lead recibido</strong><small>Formulario · ahora mismo</small></div>
+        </div>
+        <div class="fcard fcard--bl" data-depth="22">
+          <span class="fcard__ico fcard__ico--g">G</span>
+          <div><strong><span class="stars">★★★★★</span> 5.0</strong><small>Reseñas en Google</small></div>
+        </div>
+        <div class="fcard fcard--tr" data-depth="18">
+          <div><small>Tráfico orgánico</small><strong class="fcard__kpi">+182%</strong></div>
+          <svg viewBox="0 0 80 32" width="80" height="32"><path d="M0 28 C12 26 16 18 28 19 S44 10 54 11 S70 3 80 2" fill="none" stroke="#1e88e5" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="fcard fcard--br" data-depth="12">
+          <span class="fcard__ico fcard__ico--ai">✨</span>
+          <div><strong>Recomendado por la IA</strong><small>ChatGPT · Claude · Gemini</small></div>
+        </div>
+      </div>
+
       <div class="container hero__inner">
-        <span class="badge reveal">Desarrollo web &amp; marketing digital · Córdoba, España</span>
+        <span class="badge badge--hero reveal"><span class="badge__tag">Córdoba, España</span> <span class="badge__text">Desarrollo web &amp; marketing digital</span></span>
         <h1 class="hero__title reveal">
           Diseño sin complicaciones<br />
-          para <span class="text-grad">modernizar</span> tu negocio
+          para <span class="rotator" data-words="modernizar|hacer crecer|escalar|lanzar"><span class="rotator__word text-grad">modernizar</span></span> tu negocio
         </h1>
-        <p class="hero__lead reveal">
-          Eura Digital facilita que las empresas lancen, crezcan y escalen con desarrollo web y de apps,
-          y marketing digital — sin retrasos, sin dramas. Marketing digital bien hecho.
-        </p>
-        <p class="hero__strong reveal">
-          Damos a tu negocio la <span class="text-orange">VENTAJA</span>.<br />
-          Trabaja con un equipo en el que puedes <span class="text-blue">CONFIAR</span>.
-        </p>
-        <a href="#diagnostico" class="btn btn--primary reveal">Solicita tu diagnóstico gratis <span class="arrow">→</span></a>
+        <p class="hero__lead reveal">Eura Digital facilita que las empresas lancen, crezcan y escalen con desarrollo web y de apps, y marketing digital — sin retrasos, sin dramas. Marketing digital <strong>bien hecho.</strong></p>
+        <p class="hero__strong reveal">Damos a tu negocio la <span class="text-orange">VENTAJA</span>. Trabaja con un equipo en el que puedes <span class="text-blue">CONFIAR</span>.</p>
+        <div class="hero__ctas reveal">
+          <a href="#diagnostico" class="btn btn--primary btn--lg">Solicita tu diagnóstico gratis <span class="arrow">→</span></a>
+          <a href="#proyectos" class="btn btn--outline btn--lg">Ver nuestro trabajo</a>
+        </div>
 
-        <ul class="chips reveal">
-          <li>Desarrollo Web</li>
-          <li>SEO Integral</li>
-          <li>Redes Sociales</li>
-          <li>SEM / PPC</li>
-          <li>Apps Móviles</li>
-          <li>Soluciones IA</li>
-          <li>Y más…</li>
-        </ul>
+        <div class="trust reveal">
+          <div class="avatars" aria-hidden="true"><span style="--c:#1e88e5">M</span><span style="--c:#ff7a00">L</span><span style="--c:#22c55e">A</span><span style="--c:#0b1736">J</span><span class="avatars__more">+</span></div>
+          <div class="trust__text"><span class="stars">★★★★★</span><span>La confianza de <strong>más de 120 empresas</strong> en Andalucía</span></div>
+        </div>
+
+        <ul class="chips reveal"><li><span>🖥️</span>Desarrollo Web</li><li><span>🔍</span>SEO Integral</li><li><span>📣</span>Redes Sociales</li><li><span>🎯</span>SEM / PPC</li><li><span>📱</span>Apps Móviles</li><li><span>🤖</span>Soluciones IA</li></ul>
 
         <a href="#calculadora" class="hero__mini reveal"><span class="dot dot--green"></span> ¿Cuánto deberías invertir en marketing? <span class="arrow">→</span></a>
       </div>

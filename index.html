@@ -66,33 +66,51 @@
   <main>
     <!-- ===== Hero ===== -->
     <section class="hero" id="home">
-      <div class="hero__glow hero__glow--blue"></div>
-      <div class="hero__glow hero__glow--orange"></div>
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--blue"></div>
+        <div class="hero__glow hero__glow--orange"></div>
+      </div>
+
+      <!-- Floating proof cards (wide screens) -->
+      <div class="float-cards" aria-hidden="true">
+        <div class="fcard fcard--tl" data-depth="14">
+          <span class="fcard__ico fcard__ico--green">✓</span>
+          <div><strong>New lead received</strong><small>Contact form · just now</small></div>
+        </div>
+        <div class="fcard fcard--bl" data-depth="22">
+          <span class="fcard__ico fcard__ico--g">G</span>
+          <div><strong><span class="stars">★★★★★</span> 5.0</strong><small>Google Reviews</small></div>
+        </div>
+        <div class="fcard fcard--tr" data-depth="18">
+          <div><small>Organic Traffic</small><strong class="fcard__kpi">+182%</strong></div>
+          <svg viewBox="0 0 80 32" width="80" height="32"><path d="M0 28 C12 26 16 18 28 19 S44 10 54 11 S70 3 80 2" fill="none" stroke="#1e88e5" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="fcard fcard--br" data-depth="12">
+          <span class="fcard__ico fcard__ico--ai">✨</span>
+          <div><strong>Recommended by AI</strong><small>ChatGPT · Claude · Gemini</small></div>
+        </div>
+      </div>
+
       <div class="container hero__inner">
-        <span class="badge reveal">Web Development &amp; Digital Marketing · Córdoba, Spain</span>
+        <span class="badge badge--hero reveal"><span class="badge__tag">Córdoba, Spain</span> <span class="badge__text">Web Development &amp; Digital Marketing</span></span>
         <h1 class="hero__title reveal">
           Effortless Design To<br />
-          <span class="text-grad">Modernize</span> Your Business
+          <span class="rotator" data-words="Modernize|Grow|Scale|Launch"><span class="rotator__word text-grad">Modernize</span></span> Your Business
         </h1>
-        <p class="hero__lead reveal">
-          Eura Digital makes it easy for businesses to launch, grow, and scale with web and app development
-          plus digital marketing — no delays, no drama. Digital Marketing done RIGHT!
-        </p>
-        <p class="hero__strong reveal">
-          We give your business the <span class="text-orange">EDGE!</span><br />
-          Work with someone you can <span class="text-blue">TRUST!</span>
-        </p>
-        <a href="#snapshot" class="btn btn--primary reveal">Get a Free Digital Snapshot <span class="arrow">→</span></a>
+        <p class="hero__lead reveal">Eura Digital makes it easy for businesses to launch, grow, and scale with web and app development plus digital marketing — no delays, no drama. Digital Marketing done <strong>RIGHT!</strong></p>
+        <p class="hero__strong reveal">We give your business the <span class="text-orange">EDGE!</span> Work with someone you can <span class="text-blue">TRUST!</span></p>
+        <div class="hero__ctas reveal">
+          <a href="#snapshot" class="btn btn--primary btn--lg">Get a Free Digital Snapshot <span class="arrow">→</span></a>
+          <a href="#projects" class="btn btn--outline btn--lg">View Our Work</a>
+        </div>
 
-        <ul class="chips reveal">
-          <li>Web Development</li>
-          <li>Full-Service SEO</li>
-          <li>Social Media Marketing</li>
-          <li>SEM / PPC Advertising</li>
-          <li>App Development</li>
-          <li>AI Solutions</li>
-          <li>And More…</li>
-        </ul>
+        <div class="trust reveal">
+          <div class="avatars" aria-hidden="true"><span style="--c:#1e88e5">M</span><span style="--c:#ff7a00">L</span><span style="--c:#22c55e">A</span><span style="--c:#0b1736">J</span><span class="avatars__more">+</span></div>
+          <div class="trust__text"><span class="stars">★★★★★</span><span>Trusted by <strong>120+ businesses</strong> across Andalusia</span></div>
+        </div>
+
+        <ul class="chips reveal"><li><span>🖥️</span>Web Development</li><li><span>🔍</span>Full-Service SEO</li><li><span>📣</span>Social Media Marketing</li><li><span>🎯</span>SEM / PPC Advertising</li><li><span>📱</span>App Development</li><li><span>🤖</span>AI Solutions</li></ul>
 
         <a href="#calculator" class="hero__mini reveal"><span class="dot dot--green"></span> How Much Should You Spend On Marketing? <span class="arrow">→</span></a>
       </div>
