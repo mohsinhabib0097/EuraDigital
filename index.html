@@ -10,9 +10,6 @@
   <meta property="og:description" content="Web development and digital marketing from Córdoba, Spain." />
   <meta property="og:image" content="assets/img/logo.png" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="es_ES" />
-  <link rel="alternate" hreflang="en" href="index.html" />
-  <link rel="alternate" hreflang="es" href="es/index.html" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <link rel="apple-touch-icon" href="assets/img/favicon.png" />
 
@@ -51,7 +48,6 @@
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
         <div class="nav__actions">
-          <div class="lang" aria-label="Language"><a href="index.html" hreflang="en" lang="en" class="is-active" aria-current="true">EN</a><a href="es/index.html" hreflang="es" lang="es">ES</a></div>
           <a href="#approach" class="pill pill--outline"><span class="dot"></span> How It Works</a>
           <a href="#snapshot" class="btn btn--primary btn--sm">Get a Free Digital Snapshot</a>
         </div>
@@ -199,37 +195,105 @@
 
     <!-- ===== Services ===== -->
     <section class="section services" id="services">
+      <div class="services__bg" aria-hidden="true"></div>
       <div class="container">
-        <div class="section__head">
+        <div class="section__head services__head">
           <div>
-            <span class="eyebrow">Digital Services</span>
-            <h2 class="section__title">What We Deliver</h2>
+            <span class="eyebrow-pill"><span class="dot dot--green"></span> Digital Services</span>
+            <h2 class="section__title">What We <span class="text-grad">Deliver</span></h2>
           </div>
-          <p class="section__intro">Design, development, software, and marketing under one roof, so you're not juggling five different vendors. Tap a service for the details.</p>
+          <div class="services__intro">
+            <p>Design, development, software, and marketing under one roof, so you're not juggling five different vendors. Tap a service for the details.</p>
+          </div>
         </div>
 
-        <div class="feature-row reveal">
-          <span class="tag tag--orange">Popular</span>
-          <p><strong>Web Design &amp; Development</strong> — A website that actually brings in leads. You approve the design, we build it.</p>
-          <button class="btn btn--light btn--xs" data-service="design">See Web Design →</button>
-        </div>
-        <div class="feature-row feature-row--alt reveal">
-          <span class="tag tag--blue">Premium</span>
-          <p><strong>Custom Software</strong> — Quotes, leads, bookings, and billing tools built around the way you work.</p>
-          <button class="btn btn--light btn--xs" data-service="software">Build My Wish List →</button>
+        <div class="bento">
+          <a href="#services" class="tile tile--big tile--design reveal" data-service="design">
+            <img src="assets/img/photos/team-review.webp" alt="A team reviewing a website design together" width="1200" height="800" loading="lazy" />
+            <span class="tile__num">01</span>
+            <div class="tile__body">
+              <span class="tag tag--orange">Popular</span>
+              <span class="tile__ico">🎨</span>
+              <h3>Web Design</h3>
+              <p>Beautiful, on-brand websites that actually bring in leads. You approve the design, we build it.</p>
+              <ul class="tile__list"><li>Mobile-first &amp; responsive</li><li>SEO-ready and fast</li><li>Easy for you to update</li></ul>
+              <span class="btn btn--light btn--sm">See Web Design <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <button class="tile tile--web reveal" data-service="web" style="--c:#1e88e5">
+            <span class="tile__num">02</span>
+            <span class="tile__ico">💻</span>
+            <strong>Web Development</strong>
+            <small>Fast, secure websites and web apps built to perform.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--apps reveal" data-service="apps" style="--c:#22c55e">
+            <span class="tile__num">03</span>
+            <span class="tile__ico">📱</span>
+            <strong>Mobile App Development</strong>
+            <small>Native and cross-platform apps for iOS and Android.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--hosting reveal" data-service="hosting" style="--c:#00b4e0">
+            <span class="tile__num">05</span>
+            <span class="tile__ico">🌐</span>
+            <strong>Domain &amp; Hosting</strong>
+            <small>Domains, business email, and fast, secure hosting.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--seo reveal" data-service="seo" style="--c:#22c55e">
+            <span class="tile__num">06</span>
+            <span class="tile__ico">🔍</span>
+            <strong>SEO</strong>
+            <small>Rank higher on Google — and get recommended by AI.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--marketing reveal" data-service="marketing" style="--c:#ff7a00">
+            <span class="tile__num">07</span>
+            <span class="tile__ico">📈</span>
+            <strong>Digital Marketing</strong>
+            <small>A complete strategy that brings in leads and sales.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--sem reveal" data-service="sem" style="--c:#1e88e5">
+            <span class="tile__num">08</span>
+            <span class="tile__ico">🎯</span>
+            <strong>SEM / PPC Advertising</strong>
+            <small>Google Ads and Meta Ads, with every euro tracked.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <a href="#services" class="tile tile--big tile--software reveal" data-service="software">
+            <img src="assets/img/photos/code.webp" alt="Code on a laptop screen" width="1200" height="800" loading="lazy" />
+            <span class="tile__num">04</span>
+            <div class="tile__body">
+              <span class="tag tag--blue">Premium</span>
+              <span class="tile__ico">⚙️</span>
+              <h3>Custom Software</h3>
+              <p>Quotes, leads, bookings, and billing tools built around the way you work — so your business runs itself.</p>
+              <ul class="tile__list"><li>CRMs &amp; booking systems</li><li>Dashboards &amp; internal tools</li><li>Integrations with your apps</li></ul>
+              <span class="btn btn--light btn--sm">Build My Wish List <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <button class="tile tile--social reveal" data-service="social" style="--c:#ff7a00">
+            <span class="tile__num">09</span>
+            <span class="tile__ico">📣</span>
+            <strong>Social Media Marketing</strong>
+            <small>Content and campaigns that grow your audience.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="tile tile--ia reveal" data-service="ia" style="--c:#6366f1">
+            <span class="tile__num">10</span>
+            <span class="tile__ico">🤖</span>
+            <strong>AI Solutions</strong>
+            <small>Chatbots and automation that save your team hours.</small>
+            <span class="tile__arrow" aria-hidden="true">→</span>
+          </button>
         </div>
 
-        <div class="service-grid service-grid--v">
-          <button class="service-card service-card--v reveal" data-service="design"><span class="ico ico--orange">🎨</span><strong>Web Design</strong><small>Beautiful, on-brand designs that turn visitors into customers.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="web"><span class="ico ico--blue">💻</span><strong>Web Development</strong><small>Fast, secure websites and web apps built to perform.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="apps"><span class="ico ico--green">📱</span><strong>Mobile App Development</strong><small>Native and cross-platform apps for iOS and Android.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="software"><span class="ico ico--orange">⚙️</span><strong>Custom Software</strong><small>Tools built around the way your business works.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="hosting"><span class="ico ico--blue">🌐</span><strong>Domain & Hosting</strong><small>Domains, business email, and fast, secure hosting.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="seo"><span class="ico ico--green">🔍</span><strong>SEO</strong><small>Rank higher on Google — and get recommended by AI.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="marketing"><span class="ico ico--orange">📈</span><strong>Digital Marketing</strong><small>A complete strategy that brings in leads and sales.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="sem"><span class="ico ico--blue">🎯</span><strong>SEM / PPC Advertising</strong><small>Google Ads and Meta Ads, with every euro tracked.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="social"><span class="ico ico--green">📣</span><strong>Social Media Marketing</strong><small>Content and campaigns that grow your audience.</small><span class="chev">→</span></button>
-          <button class="service-card service-card--v reveal" data-service="ia"><span class="ico ico--blue">🤖</span><strong>AI Solutions</strong><small>Chatbots and automation that save your team hours.</small><span class="chev">→</span></button>
+        <div class="services__cta reveal">
+          <span class="services__cta-ico">💡</span>
+          <p><strong>Not sure what you need?</strong> Tell us about your business and we'll recommend the right mix — free.</p>
+          <a href="#snapshot" class="btn btn--primary btn--sm">Get a Free Digital Snapshot <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
