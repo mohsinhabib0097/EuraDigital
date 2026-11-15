@@ -135,13 +135,28 @@
   /* ---------- texto de declaración que se ilumina ---------- */
   const st = $("#statementText");
   if (st && !reduceMotion) {
-    const words = st.textContent.trim().split(/\s+/);
-    st.innerHTML = words.map((w) => `<span class="w">${w}</span>`).join(" ");
+    // wrap plain words in spans, keep keyword spans and inline photos as single units
+    Array.from(st.childNodes).forEach((node) => {
+      if (node.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const sp = document.createElement("span");
+          sp.className = "w";
+          sp.textContent = part;
+          frag.appendChild(sp);
+        });
+        node.replaceWith(frag);
+      } else if (node.nodeType === 1) {
+        node.classList.add("w");
+      }
+    });
     const spans = $$(".w", st);
     const light = () => {
       const r = st.getBoundingClientRect();
       const vh = window.innerHeight;
-      const progress = Math.min(Math.max((vh * 0.85 - r.top) / (r.height + vh * 0.35), 0), 1);
+      const progress = Math.min(Math.max((vh * 0.85 - r.top) / (r.height + vh * 0.3), 0), 1);
       const n = Math.round(progress * spans.length);
       spans.forEach((s, i) => s.classList.toggle("on", i < n));
     };
