@@ -40,14 +40,11 @@
           <li><a href="#home" class="nav__link is-active">Home</a></li>
           <li class="nav__dropdown">
             <button class="nav__link nav__toggle" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-            <div class="dropdown">
-              <a href="#services" data-service="web">Web Development</a>
-              <a href="#services" data-service="seo">Full-Service SEO</a>
-              <a href="#services" data-service="social">Social Media Marketing</a>
-              <a href="#services" data-service="sem">SEM / PPC Advertising</a>
-              <a href="#services" data-service="apps">App Development</a>
-              <a href="#services" data-service="ia">AI Solutions</a>
-            </div>
+            <div class="dropdown dropdown--mega"><a href="#services" data-service="web" class="dd-item"><span class="dd-ico">🖥️</span><span><strong>Eura Website <em class="mini-badge mini-badge--orange">New</em></strong><small>A website built to bring in leads. You approve, we build.</small></span></a><a href="#services" data-service="sistemas" class="dd-item"><span class="dd-ico">⚡</span><span><strong>Business Systems <em class="mini-badge mini-badge--blue">Premium</em></strong><small>Quotes, leads, and bookings that run themselves.</small></span></a><a href="#services" data-service="web" class="dd-item"><span class="dd-ico">💻</span><span><strong>Web Development</strong><small>Fast, modern sites that convert visitors.</small></span></a><a href="#services" data-service="dominio" class="dd-item"><span class="dd-ico">🌐</span><span><strong>Domain, Email, Hosting & Care</strong><small>Everything technical, handled for you.</small></span></a><a href="#services" data-service="seo" class="dd-item"><span class="dd-ico">🔍</span><span><strong>Full-Service SEO</strong><small>Rank higher on Google and get found.</small></span></a><a href="#services" data-service="ia-vis" class="dd-item"><span class="dd-ico">✨</span><span><strong>AI Visibility</strong><small>Get recommended by ChatGPT, Claude & Gemini.</small></span></a><a href="#services" data-service="social" class="dd-item"><span class="dd-ico">📣</span><span><strong>Social Media Marketing</strong><small>Content that builds your brand.</small></span></a><a href="#services" data-service="sem" class="dd-item"><span class="dd-ico">🎯</span><span><strong>SEM / PPC Advertising</strong><small>Google & Meta ads, every euro tracked.</small></span></a><a href="#services" data-service="apps" class="dd-item"><span class="dd-ico">📱</span><span><strong>App Development</strong><small>Custom iOS, Android, and web apps.</small></span></a><a href="#services" data-service="ia" class="dd-item"><span class="dd-ico">🤖</span><span><strong>AI Solutions</strong><small>Automate the repetitive work.</small></span></a><a href="#services" data-service="reputacion" class="dd-item"><span class="dd-ico">⭐</span><span><strong>Reputation & Review</strong><small>Earn more 5-star reviews.</small></span></a><a href="#services" data-service="local" class="dd-item"><span class="dd-ico">📍</span><span><strong>Local Listings & Citations</strong><small>Stand out on Google Maps.</small></span></a></div>
+          </li>
+          <li class="nav__dropdown">
+            <button class="nav__link nav__toggle" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <div class="dropdown"><a href="#" class="dd-item"><span class="dd-ico">📝</span><span><strong>Blog <em class="mini-badge mini-badge--grey">Soon</em></strong><small>Tips on web, SEO, and marketing.</small></span></a><a href="#customer-value" class="dd-item"><span class="dd-ico">💶</span><span><strong>Customer Value Calculator</strong><small>See what one customer is really worth.</small></span></a><a href="#calculator" class="dd-item"><span class="dd-ico">📊</span><span><strong>Marketing Budget Calculator</strong><small>How much should you spend?</small></span></a><a href="#snapshot" class="dd-item"><span class="dd-ico">🔎</span><span><strong>Free Digital Snapshot</strong><small>A free report on your online presence.</small></span></a></div>
           </li>
           <li><a href="#projects" class="nav__link">Portfolio</a></li>
           <li><a href="#approach" class="nav__link">About</a></li>
@@ -349,6 +346,32 @@
       </div>
     </section>
 
+    <!-- ===== Customer value calculator ===== -->
+    <section class="section calc calc--alt" id="customer-value">
+      <div class="container calc__inner calc__inner--reverse">
+        <div>
+          <span class="eyebrow">Free Tool</span>
+          <h2 class="section__title">What Is One Customer Really Worth?</h2>
+          <p class="section__intro section__intro--left">Most businesses undervalue a new customer because they only count the first sale. Add up repeat purchases over time and you'll see how much you can afford to spend to win one.</p>
+          <a href="#snapshot" class="btn btn--primary btn--sm">Get a Free Digital Snapshot →</a>
+        </div>
+        <div class="calc__card reveal" id="clv">
+          <label for="clv-sale">Average Sale: <strong data-out="sale">€250</strong></label>
+          <input type="range" id="clv-sale" data-key="sale" min="10" max="5000" step="10" value="250" />
+          <label for="clv-freq">Purchases Per Year: <strong data-out="freq">3</strong></label>
+          <input type="range" id="clv-freq" data-key="freq" min="1" max="24" step="1" value="3" />
+          <label for="clv-years">Years As a Customer: <strong data-out="years">5</strong></label>
+          <input type="range" id="clv-years" data-key="years" min="1" max="15" step="1" value="5" />
+          <label for="clv-new">New Customers Per Month: <strong data-out="new">5</strong></label>
+          <input type="range" id="clv-new" data-key="new" min="1" max="50" step="1" value="5" />
+          <div class="calc__result calc__result--split">
+            <div><span>Lifetime Value Per Customer</span><strong data-out="ltv">€3,750</strong></div>
+            <div><span>Value of One Year of New Customers</span><strong data-out="year">€225,000</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Free snapshot ===== -->
     <section class="section snapshot" id="snapshot">
       <div class="container snapshot__inner">
@@ -409,9 +432,10 @@
             <label for="c-help">Do you already have someone handling your marketing?</label>
             <select id="c-help" name="marketing">
               <option value="">Select one (optional)</option>
-              <option>No, we're starting from scratch</option>
-              <option>Yes, we handle it in-house</option>
-              <option>Yes, with another agency</option>
+              <option>No, not yet</option>
+              <option>Yes, an employee or in-house team</option>
+              <option>Yes, another agency or freelancer</option>
+              <option>Not sure</option>
             </select>
           </div>
           <div class="field"><label for="c-msg">Project Details</label><textarea id="c-msg" name="message" rows="4" placeholder="What are you building, and what do you need help with?"></textarea></div>
@@ -438,7 +462,7 @@
         </div>
         <div>
           <h4>Get Started</h4>
-          <a href="#snapshot">Get a Free Digital Snapshot</a><a href="#projects">Our Work</a><a href="#calculator">Marketing Budget Calculator</a>
+          <a href="#snapshot">Get a Free Digital Snapshot</a><a href="#projects">Our Work</a><a href="#calculator">Marketing Budget Calculator</a><a href="#customer-value">Customer Value Calculator</a>
         </div>
         <div>
           <h4>Contact</h4>

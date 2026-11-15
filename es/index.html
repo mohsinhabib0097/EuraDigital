@@ -39,14 +39,11 @@
           <li><a href="#inicio" class="nav__link is-active">Inicio</a></li>
           <li class="nav__dropdown">
             <button class="nav__link nav__toggle" aria-expanded="false">Servicios <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-            <div class="dropdown">
-              <a href="#servicios" data-service="web">Desarrollo Web</a>
-              <a href="#servicios" data-service="seo">SEO Integral</a>
-              <a href="#servicios" data-service="social">Redes Sociales</a>
-              <a href="#servicios" data-service="sem">SEM / Publicidad PPC</a>
-              <a href="#servicios" data-service="apps">Desarrollo de Apps</a>
-              <a href="#servicios" data-service="ia">Soluciones con IA</a>
-            </div>
+            <div class="dropdown dropdown--mega"><a href="#servicios" data-service="web" class="dd-item"><span class="dd-ico">🖥️</span><span><strong>Web Eura <em class="mini-badge mini-badge--orange">Nuevo</em></strong><small>Una web pensada para captar clientes. Tú apruebas, nosotros construimos.</small></span></a><a href="#servicios" data-service="sistemas" class="dd-item"><span class="dd-ico">⚡</span><span><strong>Sistemas de negocio <em class="mini-badge mini-badge--blue">Premium</em></strong><small>Presupuestos, leads y reservas que funcionan solos.</small></span></a><a href="#servicios" data-service="web" class="dd-item"><span class="dd-ico">💻</span><span><strong>Desarrollo Web</strong><small>Webs rápidas y modernas que convierten.</small></span></a><a href="#servicios" data-service="dominio" class="dd-item"><span class="dd-ico">🌐</span><span><strong>Dominio, Email, Hosting y Mantenimiento</strong><small>Toda la parte técnica, resuelta.</small></span></a><a href="#servicios" data-service="seo" class="dd-item"><span class="dd-ico">🔍</span><span><strong>SEO Integral</strong><small>Sube en Google y haz que te encuentren.</small></span></a><a href="#servicios" data-service="ia-vis" class="dd-item"><span class="dd-ico">✨</span><span><strong>Visibilidad en IA</strong><small>Que ChatGPT, Claude y Gemini te recomienden.</small></span></a><a href="#servicios" data-service="social" class="dd-item"><span class="dd-ico">📣</span><span><strong>Marketing en Redes Sociales</strong><small>Contenido que construye tu marca.</small></span></a><a href="#servicios" data-service="sem" class="dd-item"><span class="dd-ico">🎯</span><span><strong>SEM / Publicidad PPC</strong><small>Google y Meta Ads, cada euro medido.</small></span></a><a href="#servicios" data-service="apps" class="dd-item"><span class="dd-ico">📱</span><span><strong>Desarrollo de Apps</strong><small>Apps a medida para iOS, Android y web.</small></span></a><a href="#servicios" data-service="ia" class="dd-item"><span class="dd-ico">🤖</span><span><strong>Soluciones con IA</strong><small>Automatiza el trabajo repetitivo.</small></span></a><a href="#servicios" data-service="reputacion" class="dd-item"><span class="dd-ico">⭐</span><span><strong>Reputación y Reseñas</strong><small>Consigue más reseñas de 5 estrellas.</small></span></a><a href="#servicios" data-service="local" class="dd-item"><span class="dd-ico">📍</span><span><strong>Fichas Locales y Citaciones</strong><small>Destaca en Google Maps.</small></span></a></div>
+          </li>
+          <li class="nav__dropdown">
+            <button class="nav__link nav__toggle" aria-expanded="false">Recursos <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <div class="dropdown"><a href="#" class="dd-item"><span class="dd-ico">📝</span><span><strong>Blog <em class="mini-badge mini-badge--grey">Pronto</em></strong><small>Consejos de web, SEO y marketing.</small></span></a><a href="#valor-cliente" class="dd-item"><span class="dd-ico">💶</span><span><strong>Calculadora de valor de cliente</strong><small>Descubre cuánto vale de verdad un cliente.</small></span></a><a href="#calculadora" class="dd-item"><span class="dd-ico">📊</span><span><strong>Calculadora de presupuesto</strong><small>¿Cuánto deberías invertir?</small></span></a><a href="#diagnostico" class="dd-item"><span class="dd-ico">🔎</span><span><strong>Diagnóstico digital gratis</strong><small>Un informe gratuito de tu presencia online.</small></span></a></div>
           </li>
           <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
           <li><a href="#metodo" class="nav__link">Nosotros</a></li>
@@ -348,6 +345,32 @@
       </div>
     </section>
 
+    <!-- ===== Calculadora de valor de cliente ===== -->
+    <section class="section calc calc--alt" id="valor-cliente">
+      <div class="container calc__inner calc__inner--reverse">
+        <div>
+          <span class="eyebrow">Herramienta gratuita</span>
+          <h2 class="section__title">¿Cuánto vale de verdad un cliente?</h2>
+          <p class="section__intro section__intro--left">La mayoría de empresas infravaloran un cliente nuevo porque solo cuentan la primera venta. Suma las compras repetidas a lo largo del tiempo y verás cuánto puedes invertir para conseguir uno.</p>
+          <a href="#diagnostico" class="btn btn--primary btn--sm">Solicita tu diagnóstico gratis →</a>
+        </div>
+        <div class="calc__card reveal" id="clv">
+          <label for="clv-sale">Venta media: <strong data-out="sale">250 €</strong></label>
+          <input type="range" id="clv-sale" data-key="sale" min="10" max="5000" step="10" value="250" />
+          <label for="clv-freq">Compras al año: <strong data-out="freq">3</strong></label>
+          <input type="range" id="clv-freq" data-key="freq" min="1" max="24" step="1" value="3" />
+          <label for="clv-years">Años como cliente: <strong data-out="years">5</strong></label>
+          <input type="range" id="clv-years" data-key="years" min="1" max="15" step="1" value="5" />
+          <label for="clv-new">Clientes nuevos al mes: <strong data-out="new">5</strong></label>
+          <input type="range" id="clv-new" data-key="new" min="1" max="50" step="1" value="5" />
+          <div class="calc__result calc__result--split">
+            <div><span>Valor de vida por cliente</span><strong data-out="ltv">3750 €</strong></div>
+            <div><span>Valor de un año de clientes nuevos</span><strong data-out="year">225.000 €</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Diagnóstico gratuito ===== -->
     <section class="section snapshot" id="diagnostico">
       <div class="container snapshot__inner">
@@ -407,10 +430,11 @@
           <div class="field">
             <label for="c-help">¿Ya tienes a alguien gestionando tu marketing?</label>
             <select id="c-help" name="marketing">
-              <option value="">Selecciona una opción</option>
-              <option>No, empezamos de cero</option>
-              <option>Sí, lo gestionamos internamente</option>
-              <option>Sí, con otra agencia</option>
+              <option value="">Selecciona una opción (opcional)</option>
+              <option>No, todavía no</option>
+              <option>Sí, un empleado o equipo interno</option>
+              <option>Sí, otra agencia o freelance</option>
+              <option>No estoy seguro</option>
             </select>
           </div>
           <div class="field"><label for="c-msg">Detalles del proyecto</label><textarea id="c-msg" name="mensaje" rows="4" placeholder="¿Qué estás construyendo y qué te gustaría conseguir?"></textarea></div>
@@ -437,7 +461,7 @@
         </div>
         <div>
           <h4>Empieza aquí</h4>
-          <a href="#diagnostico">Diagnóstico digital gratis</a><a href="#proyectos">Nuestro trabajo</a><a href="#calculadora">Calculadora de presupuesto</a>
+          <a href="#diagnostico">Diagnóstico digital gratis</a><a href="#proyectos">Nuestro trabajo</a><a href="#calculadora">Calculadora de presupuesto</a><a href="#valor-cliente">Calculadora de valor de cliente</a>
         </div>
         <div>
           <h4>Contacto</h4>

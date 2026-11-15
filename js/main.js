@@ -48,16 +48,20 @@
     if (document.body.classList.contains("menu-open") && !nav.contains(e.target) && !burger.contains(e.target)) setMenu(false);
   });
 
-  /* desplegable de servicios (clic en móvil / teclado) */
-  const dd = $(".nav__dropdown");
-  const ddToggle = $(".nav__toggle");
-  ddToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const open = !dd.classList.contains("is-open");
-    dd.classList.toggle("is-open", open);
-    ddToggle.setAttribute("aria-expanded", String(open));
+  /* dropdowns (click on mobile / keyboard) */
+  const dds = $$(".nav__dropdown");
+  const closeDd = (dd) => { dd.classList.remove("is-open"); $(".nav__toggle", dd).setAttribute("aria-expanded", "false"); };
+  dds.forEach((dd) => {
+    const t = $(".nav__toggle", dd);
+    t.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = !dd.classList.contains("is-open");
+      dds.forEach(closeDd);
+      dd.classList.toggle("is-open", open);
+      t.setAttribute("aria-expanded", String(open));
+    });
   });
-  document.addEventListener("click", (e) => { if (!dd.contains(e.target)) dd.classList.remove("is-open"); });
+  document.addEventListener("click", (e) => { dds.forEach((dd) => { if (!dd.contains(e.target)) closeDd(dd); }); });
 
   /* ---------- enlace activo según sección ---------- */
   const links = $$(".nav__list > li > a.nav__link");
@@ -217,6 +221,23 @@
     calc();
   }));
   calc();
+
+  /* ---------- customer value calculator ---------- */
+  const clv = $("#clv");
+  if (clv) {
+    const inputs = $$("input[data-key]", clv);
+    const out = (k, v) => { const el = $(`[data-out="${k}"]`, clv); if (el) el.textContent = v; };
+    const calcClv = () => {
+      const v = {};
+      inputs.forEach((i) => { v[i.dataset.key] = +i.value; });
+      out("sale", fmt.format(v.sale)); out("freq", v.freq); out("years", v.years); out("new", v.new);
+      const ltv = v.sale * v.freq * v.years;
+      out("ltv", fmt.format(ltv));
+      out("year", fmt.format(ltv * v.new * 12));
+    };
+    inputs.forEach((i) => i.addEventListener("input", calcClv));
+    calcClv();
+  }
 
   /* ---------- formularios (validación en cliente) ---------- */
   const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
