@@ -1216,3 +1216,49 @@ a.contact-card:hover { background: rgba(255,255,255,.1); border-color: rgba(255,
 }
 
 @media (max-width: 640px) { .industry-grid { scroll-padding: 0 20px; } }
+
+/* =========================================================
+   Font Awesome icons — colours & sizing
+   ========================================================= */
+.fa-solid, .fa-brands, .fa-regular { line-height: 1; }
+.dd-ico { color: var(--blue); font-size: .9rem; }
+.dropdown--mega .dd-item:nth-child(1) .dd-ico { color: var(--orange); }
+.dd-item:hover .dd-ico { background: var(--grad-blue); color: #fff; }
+.dd-ico { transition: background .25s, color .25s; }
+.chips li span { color: var(--blue); }
+.chips li:hover span { color: var(--orange); }
+.tile__ico, .why-card__ico { color: var(--c, var(--blue)); font-size: 1.25rem; }
+.tile--big .tile__ico { color: #fff; }
+.pillar:nth-child(1) .pillar__ico { color: var(--orange); }
+.pillar:nth-child(2) .pillar__ico { color: var(--blue-2); }
+.pillar:nth-child(3) .pillar__ico { color: #16a34a; }
+.pillar__ico { font-size: 1.15rem; }
+.stat__ico { color: #ffb800; font-size: 1rem; }
+.industry__ico { color: var(--orange); font-size: 1rem; }
+.flow__ico { color: #ffb800; }
+.flow__ok { font-size: .65rem; }
+.tool-card__ico { color: var(--orange); font-size: 1.2rem; }
+.tool-card__ico--blue { color: var(--blue); }
+.contact-card__ico { color: #fff; font-size: 1rem; }
+.contact-card__ico--wa { color: #25d366; font-size: 1.25rem; }
+.form-card__ico { color: var(--blue); font-size: 1.15rem; }
+.ai-mini__ico { color: var(--blue); }
+.services__cta-ico { color: #ffb800; font-size: 1.15rem; }
+.why-float > span { color: var(--orange); }
+.fcard__ico--g { color: #4285f4; }
+.fcard__ico--ai { color: #6366f1; }
+.stars { color: #ffb800; display: inline-flex; gap: 2px; font-size: .78rem; }
+.snapshot-media figcaption i { color: var(--blue); }
+.city-card figcaption i, .stack-chip i, .badge__tag i { color: var(--orange); }
+.socials a { font-size: .95rem; }
+.whatsapp { font-size: 1.7rem; color: #fff; }
+.btn i.fa-whatsapp { font-size: 1.1rem; color: #25d366; }
+.modal__dialog #modalIcon { color: var(--blue); font-size: 1.2rem; }
+.form__note i { color: var(--green); margin-right: 4px; }
+.ico { font-size: 1rem; }
+
+/* CSS-generated icons */
+.badge__tag::before { content: "\f3c5"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 6px; color: var(--orange); }
+.why-list li::before, .showcase__list li::before, .checks li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.ai-checks li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; margin-right: 6px; }
+.ribbon__track span::after { content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: .62rem; }
