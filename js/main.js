@@ -185,7 +185,7 @@
   } else counters.forEach(runCounter);
 
   /* ---------- filtro de proyectos ---------- */
-  const projFilters = $$("#proyectos .filter");
+  const projFilters = $$(".projects .filter");
   projFilters.forEach((btn) => btn.addEventListener("click", () => {
     projFilters.forEach((b) => b.classList.toggle("is-active", b === btn));
     const f = btn.dataset.filter;
@@ -288,6 +288,10 @@
     inputs.forEach((i) => i.addEventListener("input", calcClv));
     calcClv();
   }
+
+  /* ---------- range sliders: filled track ---------- */
+  const fillRange = (r) => r.style.setProperty("--p", ((r.value - r.min) / (r.max - r.min)) * 100 + "%");
+  $$('input[type="range"]').forEach((r) => { fillRange(r); r.addEventListener("input", () => fillRange(r)); });
 
   /* ---------- formularios (validación en cliente) ---------- */
   const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
